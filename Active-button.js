@@ -14,21 +14,21 @@
             document.getElementById("loginForm").style.display = "none";  // Hide Login popup
         }
 
-        // Function to open the Login popup
         function openLoginPopup() {
-            closePopup('popupForm');  // Close Sign Up popup
-            document.getElementById("loginForm").style.display = "block";  // Show Login popup
+            document.getElementById("loginForm").style.display = "block";
+            document.getElementById("popupForm").style.display = "none";
         }
 
-        // Function to open the Sign-Up popup
         function openSignupPopup() {
-            closePopup('loginForm');  // Close Login popup
-            document.getElementById("popupForm").style.display = "block";  // Show Sign-Up popup
+            document.getElementById("popupForm").style.display = "block";
+            document.getElementById("loginForm").style.display = "none";
         }
+       
 
         // Function to close the popups
         function closePopup(popupId) {
-            document.getElementById(popupId).style.display = "none";  // Hide the modal
+            console.log(`Closing popup: ${popupId}`); // Debug log
+            document.getElementById(popupId).style.display = "none"; // Hide the popup
         }
 
         // Close popups when clicking outside the modal content
@@ -46,3 +46,22 @@
         });
 
 //Booking
+function showPopup() {
+    const modal = document.getElementById("popupMessage");
+    modal.style.display = "flex"; // Display as flex for centering
+    document.getElementById("bookingForm").reset();
+}
+
+// Close the modal
+function closePopupMessage() {
+    const modal = document.getElementById("popupMessage");
+    modal.style.display = "none";
+}
+
+// Optional: Close modal when clicking outside the modal content
+window.onclick = function(event) {
+    const modal = document.getElementById("popupMessage");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};

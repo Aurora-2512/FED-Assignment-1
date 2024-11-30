@@ -19,7 +19,6 @@
                 <ul><a href="index.html">Home</a></ul>
                 <ul><a href="ContactUs.html">Contact</a></ul>
                 <ul><a href="About.html">About</a></ul>
-
             </div>
         </div>
 
@@ -91,22 +90,26 @@
                         </table>
                         <table>
                             <tr>
-                                <td><label for="Validity">Validity</labek></td>
+                                <td><label for="Validity">Validity</label></td>
                                 <td><input type="text" id="validity" name="Validity" required placeholder="MM/YY"></td>
-                                <td><label for="CCV">CCV</labek></td>
+                                <td><label for="CCV">CCV</label></td>
                                 <td><input type="text" id="CCV" name="CCV" required placeholder="3-digit CCV"></td>
                             </tr>
                         </table>
-                        <button type="submit" class="btn">Booking</button>  
+                        <button type="button" class="btn" onclick="showPopup()">Booking</button> 
                     </div>
                 </form>
             </div>
         </div> 
     </div>
 </div>
+<div id="popupMessage" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closePopupMessage()">&times;</span>
+        <p>Your booking is Pending. We will contact you within 24 Hrs.</p>
+    </div>
+</div>
 <script src="Active-button.js"></script>  
-<script>
-    
-</script>  
+ 
 </body>
 </html>

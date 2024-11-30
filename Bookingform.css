@@ -76,8 +76,44 @@ input:focus {
     background-color: #7a6a62;
   }
 
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left:0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+    justify-content: center;
+    align-items: center;
+}
 
-  @media (max-width: 768px) {
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
     .formcontent {
         width: 90%; /* Form width set to 90% on smaller screens */
         padding: 15px; /* Reduce padding */
@@ -102,6 +138,35 @@ input:focus {
     .btn {
         width: 80%; /* Make the button wider on mobile */
     }
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+      justify-content: center;
+      align-items: center;
+  }
+  
+    .modal-content {
+      background-color: #fff;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 50%;
+      text-align: center;
+      border-radius: 5px;
+      font-size: 14px; /* Adjust font size for better readability */
+  }
+  .close-button {
+    font-size: 20px; /* Reduce size of the close button */
+    top: 5px;
+    right: 10px;
+}
+
 
 }
 

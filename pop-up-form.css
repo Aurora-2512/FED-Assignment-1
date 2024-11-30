@@ -21,8 +21,16 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+.popup-form.active {
+    display: flex; /* Flex for centering */
+    opacity: 1;
 }
 
+.popup-form.inactive {
+    opacity: 0;
+}
 .popup-content {
     position: relative;
     top: 50%;
@@ -34,6 +42,7 @@
     max-width: 400px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease;
 }
 
 /* Close Button */
@@ -44,12 +53,13 @@
     font-size: 20px;
     cursor: pointer;
     color: #888;
+    z-index: 1001;
 }
 
 /* Form Fields */
 .popup-content form input {
     display: block;
-    width: 100%;
+    width: calc(100% - 20px); /* Ensure it fits with padding */
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ddd;
@@ -65,29 +75,4 @@
     color: white;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-}
-.social-buttons {
-    display: flex;
-    margin-top: 10px;
-    justify-content: space-evenly;
-}
-.social-button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px 15px;
-    margin: 10px 0;
-    cursor: pointer;
-    border-radius:360px;
-
-}
-
-.social-button img.icon {
-    width: 30px;
-    height: 30px;
-}
-
-.social-button:hover {
-    background-color: #f7f7f7;
-}
+    cursor: pointer;}
