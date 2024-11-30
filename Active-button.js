@@ -52,6 +52,11 @@ function showPopup() {
     document.getElementById("bookingForm").reset();
 }
 
+function clearfield(){
+    const clear=document.getElementById("bookingForm");
+    bookingForm.reset();
+}
+
 // Close the modal
 function closePopupMessage() {
     const modal = document.getElementById("popupMessage");

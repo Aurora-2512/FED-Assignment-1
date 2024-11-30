@@ -6,7 +6,6 @@ const pagodas=[
     {id: 5, image:"image/Thatbyinnyu.jpg",name:"Thatbyinnyu"},
     {id: 6, image:"image/Lawkanandar.jpg",name:"Lawkanandar"}
 ];
-
 const grid=document.querySelector("#productGrid")
 
 pagodas.forEach(pagodas=> {

@@ -77,8 +77,7 @@ body.sidebar-active .about  {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10%;
-    
+    margin-top: 10%; 
 }
 .package p{
     font-size: 16pt;

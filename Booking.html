@@ -33,7 +33,7 @@
             <div class="formcontent">
                 <form action="/submit-book" method=" post">
                     <h2>Booking</h2>
-                    <div class="form-group">
+                    <div class="form-group" id="bookingForm">
                         <label for="email">Email Address(*)</label>
                         <input type="email" id="email" name="email" required >
                         <table>
@@ -96,7 +96,7 @@
                                 <td><input type="text" id="CCV" name="CCV" required placeholder="3-digit CCV"></td>
                             </tr>
                         </table>
-                        <button type="button" class="btn" onclick="showPopup()">Booking</button> 
+                        <button type="button" class="btn" onclick="showPopup()" onclick="clearfield()">Submit</button> 
                     </div>
                 </form>
             </div>

@@ -70,7 +70,6 @@ Features Catering to Users:
 
 - Social logins and multi-modal forms to streamline user interactions​(Index).
 
-
 # Functions
 Key Implemented Features:
 - Sidebar Navigation: Consistent across pages, enabling easy movement between sections​(Index)​(Destination).
