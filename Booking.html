@@ -1,0 +1,112 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <link rel="stylesheet" type="text/css" href="Bookingform.css">
+    <link rel="stylesheet" type="text/css" href="PageStyle.css">
+</head>
+<body>
+    <div id="background">
+        <div class="menu-box">
+            <div  class="menubar"> 
+                <div class="menu-icon">
+                    <i class="fas fa-bars"></i> <!-- FontAwesome hamburger icon -->
+                    <div  class="title">TravelBagan</div>
+                </div>
+                <ul><a href="index.html">Home</a></ul>
+                <ul><a href="ContactUs.html">Contact</a></ul>
+                <ul><a href="About.html">About</a></ul>
+
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <a class="active" href="Destination.html">Destination</a>
+            <a href="Booking.html">Booking</a>
+            <a href="Package.html">Packages</a>
+        </div> 
+<div class="container2">
+        <div class="formbox">
+            <div class="formcontent">
+                <form action="/submit-book" method=" post">
+                    <h2>Booking</h2>
+                    <div class="form-group">
+                        <label for="email">Email Address(*)</label>
+                        <input type="email" id="email" name="email" required >
+                        <table>
+                            <tr>
+                                <td><label for="first name" >First Name(*)</label></td>
+                                <td><label for="last name">Last Name(*)</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" id="First name" name="first name" required ></td>
+                                <td><input type="text" id="Last name" name="Last name" required ></td>
+                            </tr>
+                        </table>
+                        
+                        <label for="contact">Contact Number</label>
+                        <input type="text" id="phone number" name="Phone number" required>
+                        
+                        <table>
+                            <p><b>Package Details</b></p>
+                            <tr>
+                                <td><label for="PackageNo">Package No.</label></td>
+                                <td><label for="Pax">Pax</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="number" id="package number" name="Package number" min="1" max="4" required></td>
+                                <td><input type="number" id="Pax" name="Pax" min="1" required></td>
+                            </tr>
+                        </table>
+                        
+                        <table>
+                            <tr>
+                                <td><lable for="Date">Tour Start Date</lable></td>
+                                <td><input type="date" id="Date" name="date" required></td>
+                            </tr>
+                        </table>
+                        
+                        <table>
+                            <tr>
+                                <td><lable for="text">Tour Start Place</lable></td>
+                                <td><select id="City" name="city">
+                                    <option value="Yangon">Yangon</option>
+                                    <option value="Mandalay">Mandalay</option>
+                                    <option value="NayPyiTaw">NayPyiTaw</option>
+                                </select></td>
+                            </tr>
+                        </table>
+                        
+                        <p style="text-align: left;"><b>Payment Method</b><br>
+                            (your booking will be confirmed only after paying a deposit of $25 for each pax)</p>
+                        <table>
+                            <tr>
+                                <td><lable for="Card number">Card Number</lable></td>
+                                <td><input type="text" id="Card number" name="Card Number" required ></td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td><label for="Validity">Validity</labek></td>
+                                <td><input type="text" id="validity" name="Validity" required placeholder="MM/YY"></td>
+                                <td><label for="CCV">CCV</labek></td>
+                                <td><input type="text" id="CCV" name="CCV" required placeholder="3-digit CCV"></td>
+                            </tr>
+                        </table>
+                        <button type="submit" class="btn">Booking</button>  
+                    </div>
+                </form>
+            </div>
+        </div> 
+    </div>
+</div>
+<script src="Active-button.js"></script>  
+<script>
+    
+</script>  
+</body>
+</html>

@@ -1,0 +1,131 @@
+.formbox{
+    display: flex;
+    margin-top: 3px;
+    justify-content: center;
+  }
+
+  /* Container Styling */
+.formcontent {
+    width: 400px;
+    padding: 20px 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+  }
+  
+  /* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #333;
+  }
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns labels to the left */
+    gap: 5px; /* Adds space between label and input */
+  }
+  
+label {
+    font-size: 14px;
+    color: #555;
+    text-align: left;
+    width: 100%;
+  }
+  
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+  }
+  
+input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  }
+  
+  /* Button Styling */
+.btn {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #A58D8D;
+    width: 100px;
+    align-items: center;
+  }
+  
+.primary-btn {
+    background-color: #8d7b72;
+    color: white;
+  }
+  
+.primary-btn:hover {
+    background-color: #7a6a62;
+  }
+
+
+  @media (max-width: 768px) {
+    .formcontent {
+        width: 90%; /* Form width set to 90% on smaller screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    form {
+        gap: 15px; /* Reduce the gap between form elements */
+    }
+
+    h2 {
+        font-size: 20px; /* Adjust the heading font size */
+    }
+
+    .form-group label {
+        font-size: 12px; /* Smaller font size for labels */
+    }
+
+    input {
+        font-size: 12px; /* Smaller font size for input fields */
+    }
+
+    .btn {
+        width: 80%; /* Make the button wider on mobile */
+    }
+
+}
+
+/* Media Query for Laptops (max-width: 1200px) */
+@media (max-width: 1200px) {
+    .formcontent {
+        width: 60%; /* Reduce the form width on laptops */
+        padding: 25px; /* Increase padding for better spacing */
+    }
+
+    h2 {
+        font-size: 24px; /* Slightly larger heading for laptops */
+    }
+
+    .form-group label {
+        font-size: 14px; /* Standard font size for labels */
+    }
+
+    input {
+        font-size: 14px; /* Standard font size for input fields */
+    }
+
+    .btn {
+        width: 120px; /* Make the button wider on laptops */
+    }
+}
+

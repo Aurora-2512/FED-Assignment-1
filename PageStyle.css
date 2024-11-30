@@ -1,0 +1,210 @@
+#backgroundgrey{
+    width: 100%; 
+    min-height: 100vh;
+    background-color: #a2a4a8;
+    background-size: cover;
+    position: relative;
+    }
+
+h2{
+    padding:10px;
+}
+/*container for content to switch*/
+.container2{
+    display:flex;
+    justify-content: center;
+    max-width: 1200px; /* Adjust to your preference */
+    margin-left: 20px; 
+}
+
+#productGrid, #sceneryGrid ,#square{
+    display: flex;
+    flex-wrap:nowrap; /* 5 items per row */
+    gap: 20px; /* Space between items */
+    padding: 10px;
+    overflow:auto;
+    }
+
+.pagoda-item, .scenery-item , .food-item{
+    flex: 1 1 calc(20% - 20px); /* 20% width minus gap */
+    box-sizing: border-box;
+}
+
+.pagoda-item img, .scenery-item img, .food-item img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+
+}
+
+.packages-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
+    gap: 20px; /* Space between the grid items */     
+}
+
+.package,.image {
+    background-color: #a2a4a8;
+}
+
+.package h4{margin-left:20px;}
+
+.package1,.package2,.package3,.package4{
+    background-color: #333;
+    color: white;
+    font-size: 14pt;
+    border-radius: 12px;
+    width: 400px;
+    height: 250px;
+    padding: 20px;
+    
+}
+.container2, .about, .contact-box {
+    width: calc(100% - 300px); /* Reduce content width by the sidebar's width */
+    max-width: 1100px; /* Optional: Set a max-width for better design */
+    margin-left: 20px;/* Center the content horizontally */
+    margin-right: auto; /* Center the content horizontally */
+    transition: width 0.3s ease; /* Smooth adjustment */
+}
+
+body.sidebar-active .container2,
+body.sidebar-active .contact-box,
+body.sidebar-active .about  {
+    transform: translateX(300px); /* Shift content by 300px */   
+}
+
+.contact-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    
+}
+.package p{
+    font-size: 16pt;
+    padding:5px;
+}
+.package p,h3{
+    margin-left:10px;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+}
+
+.about p,ul{
+    margin-left: 8px;
+    font-size: 15pt;
+    justify-content: justify;
+}
+
+@media (max-width: 768px) {
+    /* Background grey adjustments */
+    #backgroundgrey {
+        background-size: auto; /* Ensure background adjusts on small screens */
+    }
+
+    body.sidebar-active .container2,
+    body.sidebar-active .contact-box,
+    body.sidebar-active .about  {
+        transform: translateX(0); /* Shift content by 300px */   
+    }
+
+    /* Adjust the container width and spacing */
+    .container2, .about, .contact-box {
+        width: 100%; /* Full width for smaller screens */
+        margin-left: 0; /* Remove margin */
+        margin-right: 0; /* Remove margin */
+        padding: 10px; /* Add some padding */
+        
+    }
+
+    /* Stack items vertically in the grid */
+    #productGrid, #sceneryGrid, #square {
+        flex-wrap: wrap; /* Allow wrapping of items */
+        gap: 15px; /* Reduce space between items */
+        justify-content: center; /* Center items */
+    }
+
+    .pagoda-item, .scenery-item, .food-item {
+        flex: 1 1 45%; /* 2 items per row on small screens */
+        max-width: 45%;
+    }
+
+    .package1, .package2, .package3, .package4 {
+        width: 100%; /* Full width for each package */
+        height: auto; /* Allow content to grow naturally */
+    }
+
+    .package {
+        font-size: 12pt; /* Adjust font size */
+    }
+
+    .about p, .about ul {
+        font-size: 14pt; /* Adjust text size */
+    }
+
+    .package h4 {
+        font-size: 16pt; /* Reduce heading size */
+    }
+
+    .packages-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image {
+        width: 100%;  /* Make image scale to full width of its container */
+        max-width: 100%; /* Ensure image doesn't stretch beyond its container */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .image img {
+        width: 100%; /* Make image take up full width of the container */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Prevent image from being inline (removes spacing below image) */
+    }
+}
+
+/* Media Query for laptops (max-width: 1200px) */
+@media (max-width: 1200px) {
+    /* Background grey adjustments for laptops */
+    #backgroundgrey {
+        background-size: cover; /* Keep background cover on laptops */
+    }
+
+    /* Adjust the container layout */
+    .container2, .about, .contact-box {
+        width: 80%; /* Set width to 80% of screen width */
+        margin-left: auto; /* Center horizontally */
+        margin-right: auto; /* Center horizontally */
+    }
+
+    /* Grid layout for products */
+    #productGrid, #sceneryGrid, #square {
+        flex-wrap: wrap; /* Allow wrapping on laptops */
+        gap: 15px; /* Reduce space between items */
+    }
+
+    .pagoda-item, .scenery-item, .food-item {
+        flex: 1 1 calc(33.33% - 20px); /* 3 items per row on laptops */
+    }
+
+    /* Adjust package items to fit better */
+    .package1, .package2, .package3, .package4 {
+        width: 48%; /* Two items per row */
+        height: auto; /* Allow content to grow naturally */
+    }
+
+    .package {
+        font-size: 14pt; /* Slightly larger font for laptops */
+    }
+
+    .about p, .about ul {
+        font-size: 16pt; /* Increase text size */
+    }
+
+    .package h4 {
+        font-size: 18pt; /* Slightly larger font for heading */
+    }
+}

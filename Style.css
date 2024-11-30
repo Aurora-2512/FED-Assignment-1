@@ -1,0 +1,179 @@
+#background{
+    position: relative; 
+    width: 100%; 
+    min-height: 100vh; 
+    background-image: url("Image\\MainBackground.jpg"); 
+    background-attachment: fixed; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    }
+    
+.menu-box{
+    display: flex;
+}
+
+.menubar{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    background-color: #f1f1f13d;
+    width: 100%;
+    padding-right:60px;
+    font-size: 14pt;
+    color: black;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    color: black;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    padding-top: 12px;
+    z-index: 100; /* Make sure it's above the sidebar */
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    font-size: 16pt;
+    font-weight: bold;
+    margin-left: 20px; /* Spacing from hamburger icon */
+}
+
+.sidebar{
+    margin:0;
+    padding:0;
+    width:300px;
+    top:0; bottom: 0; left: -300px;
+    background-color:#f1f1f13d;
+    Position:Fixed;
+    height:100%;
+    overflow:auto;
+    text-align: center;
+    font-size: 16pt;
+}
+
+.sidebar.active {
+    left: 0; /* Show when active */
+}
+.sidebar p{
+    font-size: xx-large;
+
+}
+
+.sidebar a{
+    display: block;
+    color:black;
+    padding:16px;
+    text-decoration: none;
+}
+.container1{
+    display: flex;
+    margin-top: 200px;
+    justify-content: flex-end; 
+}
+
+
+.content{
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+padding: 60px; 
+width: 100%; 
+max-width: 600px; 
+text-align: center; 
+
+
+}
+.content h1{
+font-size: 90pt;
+text-align: right;
+}
+
+.content p{
+font-size: 20pt;
+margin: 10px 0;
+}
+ 
+@media (max-width: 768px) {
+    .menu-box{
+        display: flex;
+        z-index: 2000;
+    }
+    .menubar {
+        flex-direction: row; /* Stack items vertically */
+        font-size: 12pt; /* Adjust font size for smaller screens */
+        justify-content: flex-end; /* Center the menu */
+        align-items: center;
+        z-index: 2000;
+    }
+
+    .menu-icon {
+        font-size: 20px;
+        padding-top: 10px;
+        color:black;
+    }
+
+    .title {
+        font-size: 14pt; /* Reduce title size */
+        margin-left: 10px; /* Reduce spacing */
+    }
+
+    .sidebar {
+        width: 200px; /* Adjust sidebar width for smaller screens */
+        z-index: 1000;
+        background-color: #898484;
+    }
+
+    .content {
+        padding: 20px; /* Reduce padding for better fit */
+        max-width: 100%; /* Ensure content spans full width */
+        text-align: center; /* Center align text */
+    }
+
+    .content h1 {
+        font-size: 50pt; /* Smaller headings */
+    }
+
+    .content p {
+        font-size: 16pt; /* Adjust paragraph font size */
+    }
+}
+
+/* Media Query for laptops (max-width: 1200px) */
+@media (max-width: 1200px) {
+    .menubar {
+        font-size: 14pt; /* Adjust font size */
+        padding-right: 30px;
+    }
+
+    .menu-icon {
+        font-size: 25px; /* Slightly smaller icon for laptops */
+    }
+
+    .title {
+        font-size: 16pt;
+        margin-left: 15px;
+    }
+
+    .sidebar {
+        width: 250px; /* Slightly narrower sidebar */
+    }
+
+    .content {
+        padding: 40px; /* Moderate padding */
+        max-width: 80%; /* Limit content width for readability */
+        text-align: left; /* Retain left-aligned text */
+    }
+
+    .content h1 {
+        font-size: 70pt; /* Smaller heading for laptops */
+    }
+
+    .content p {
+        font-size: 18pt;
+    }
+}
