@@ -23,7 +23,6 @@
             document.getElementById("popupForm").style.display = "block";
             document.getElementById("loginForm").style.display = "none";
         }
-       
 
         // Function to close the popups
         function closePopup(popupId) {
